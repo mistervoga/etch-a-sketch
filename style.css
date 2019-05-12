@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(248, 235, 159);
+}
+
+h2 {
+    text-align: center;
+    padding: 0.5em;
+
+}
+
+ul{
+    text-align: center;
+    padding: 1em;
+    border: 10%;
+}
+
+li{
+    display: inline;
+    list-style-type: none;
+    margin: 14px;
+}
+
+#container{
+    position: relative;
+	top: 30px;
+	outline:2px solid #000;
+	font-size: 0;
+	margin:auto;
+	height:700px;
+	width: 700px;
+	padding: 0;
+	border: none;
+}
+
+#reset, #colour, #black{
+    width: 80px;
+    height: 30px;
+    color: rgba(252, 204, 102, 1);
+    padding: 1rem;
+    background-color: rgb(97, 34, 9);
+}
