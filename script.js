@@ -1,40 +1,39 @@
 const container = document.querySelector('#container');
 const reset = document.querySelector('#reset');
 const colour = document.querySelector('#colour');
-const defaultScheme = document.querySelector('#black');
 const GridBoxSize = 700;
+getGridSize();
 
-// colour.addEventListener('mouseclick', )
 
 function createGrid(count) {
     for (let i = 0; i < count; i++) {
+        const row = document.createElement('div');
+        container.appendChild(row);
+
         for (let j = 0; j < count; j++) {
-            const box = document.createElement("div");
-            box.classList.add("box");
-
-
+            let square = document.createElement('div');
+            square.setAttribute('id', 'innerSquare');
+            square.classList.add('square');
+            square.style.width = `${GridBoxSize / count}px`;
+            square.style.height = `${GridBoxSize / count}px`;
+            row.appendChild(square);
         }
-        box.width(GridBoxSize / count);
-        box.height(GridBoxSize / count);
-        container.appendChild(box);
+
     }
 
 
 }
 
 function getGridSize() {
-    let gridCount = prompt("How many cells should the Grid have?", 16);
-    createGrid(gridCount);
-
+    let count = prompt("How many cells should the Grid have?", 16);
+    createGrid(count);
 }
 
+colour.addEventListener('btn', getRandomColour);
 
-function getRandomColour() {
-    return '#' + Math.floor(Math.random() * 16777215).toString(16)
+function getRandomColour(event) {
+    let square = event.target;
+    let randomcolour = '#' + Math.floor(Math.random() * 16777215);
+    
 }
 
-function changeColour(e) {
-
-
-
-}

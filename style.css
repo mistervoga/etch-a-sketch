@@ -22,16 +22,19 @@ li{
 }
 
 #container{
-    position: relative;
-	top: 30px;
-	outline:2px solid #000;
-	font-size: 0;
-	margin:auto;
-	height:700px;
-	width: 700px;
-	padding: 0;
-	border: none;
+    height: 700px;
+    width: 700px;
+    font-size: 0;
+    margin: auto;
 }
+
+.square {
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+
 
 #reset, #colour, #black{
     width: 80px;
