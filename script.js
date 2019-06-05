@@ -17,6 +17,7 @@ function createGrid(count) {
             square.style.width = `${GridBoxSize / count}px`;
             square.style.height = `${GridBoxSize / count}px`;
             row.appendChild(square);
+            square.addEventListener('mouseover', getRandomColour)
         }
 
     }
@@ -29,11 +30,11 @@ function getGridSize() {
     createGrid(count);
 }
 
-colour.addEventListener('btn', getRandomColour);
 
-function getRandomColour(event) {
-    let square = event.target;
-    let randomcolour = '#' + Math.floor(Math.random() * 16777215);
-    
+
+function getRandomColour(e) {
+    e.target.style.background = "rgb(" + Math.random() * 255 + ", " + Math.random() * 255 + ", " + Math.random() * 255 + ")";
+
+
 }
 
