@@ -1,6 +1,6 @@
 # etch-a-sketch
 
-Grid with variable row and cell count.
+Grid with variable row and column count.
 
 Functions:
 
